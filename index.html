@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,25 +8,57 @@
     <title>greenden</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
+     <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            font-family: 'Jost', sans-serif;
+        }
+    </style>
+
 </head>
 
 <body>
     <!--responsive navbar-->
+    <nav
+< class="bg-green-100 p-3 flex items-center justify-between sticky top-0   border bottom-1 z-10">
+     
+        <img src="./images/logo.png" alt="nostra logo" width="130" height="31">
+      </a>
 
-    <nav class="bg-green-100 p-3 flex items-center justify-between sticky top-0   border bottom-1 z-10">
-        <h1 class="text-3xl font-bold animate-pulse">Greenden</h1>
+        <div>
+            <div class="md:hidden">
+                <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                  </svg> 
+                </div>
+                
+            <ul class="flex gap-5 hidden md:flex text-black-600  ">
+                <li><a href="./index.html" class="hover:text-black hover:underline">Home</a></li>
+                <li><a href="./product.html"  class="hover:text-black hover:underline">Products</a></li>
+                <li><a href="./contact.html"  class="hover:text-black hover:underline">Contact</a></li>
+            </ul>
+        </div>
 
-        <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-            stroke="currentColor" class="w-6 h-6 md:hidden">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-        </svg>
-
-        <ul class="flex gap-5 text-gray-600 hidden md:flex">
-            <li><a href="./index.html" class="hover:text-black hover:underline">Home</a></li>
-            <li><a href="./product.html" class="hover:text-black hover:underline">Products</a></li>
-            <li><a href="./contact.html" class="hover:text-black hover:underline">Contact</a></li>
-        </ul>
+        
     </nav>
+
+      <!--Side navbar-->
+    <section id="sidenav" class="bg-green-100 fixed z-20 top-0 transition-all duration-1000" style="width: 50%;height: 100vh;right: -50%;">
+        <div class="text-right p-5">
+            <p id="closenav" class="inline cursor-pointer">X</p>
+        </div>
+        <ul class="flex flex-col gap-10 items-center  text-gray-600">
+            <li><a href="./index.html" class="hover:text-black hover:underline">Home</a></li>
+            <li><a href="./product.html"  class="hover:text-black hover:underline">Products</a></li>
+            <li><a href="./contact.html"  class="hover:text-black hover:underline">Contact</a></li>
+        </ul>
+    </section>
 
     <!--Header Section-->
     <section class="bg-green-100 p-4 md:p-10 flex justify-center">
@@ -45,9 +78,9 @@
             <p class="mt-5">160+ Plant Species | 100+ Clients</p>
         </div>
 
-        <div class="hidden md:block p-5 ">
-            <img src="https://plus.unsplash.com/premium_photo-1673203734665-0a534c043b7f?" alt="Header Image"
-                class="w-80">
+        <div class="hidden md:block p-5 rounded-lg">
+            <img src="https://plus.unsplash.com/premium_photo-1673203734665-0a534c043b7f?"  alt="Header Image"
+                class="w-80 rounded-lg transform hover:shadow-xl hover:-translate-y-2 transition">
         </div>
     </section>
 
@@ -108,59 +141,59 @@
         <h1 class="font-bold mt-5 text-3xl animate-bounce">Best Seller</h1>
 
         <div class="grid grid-cols-2 md:grid-cols-4 mt-7 gap-10 m-5">
-            <div>
-                <img src="https://images.unsplash.com/photo-1689255963820-3ce7afa707bb?"
-                    class="inline hover:shadow-xl transform hover:-translate-y-2 border-ra" alt="">
+            <div class="rounded-lg border border-black p-2 hover:shadow-2xl shadow-lime-500">
+                <img  src="https://images.unsplash.com/photo-1689255963820-3ce7afa707bb?"
+                    class="inline hover:shadow-xl transform hover:-translate-y-2 rounded-lg" alt="">
                 <h1>Rose Plant</h1>
                 <p>$20</p>
             </div>
 
-            <div>
+            <div class="rounded-lg border border-black p-2 hover:shadow-2xl shadow-lime-500">
                 <img src="https://images.unsplash.com/photo-1719534846735-61e0924ea7fa?"
-                    class="inline hover:shadow-xl transform hover:-translate-y-2" alt="">
+                    class="inline hover:shadow-xl transform hover:-translate-y-2 rounded-lg" alt="">
                 <h1>lily Plant</h1>
                 <p>$20</p>
             </div>
 
-            <div>
+            <div class="rounded-lg border border-black p-2 hover:shadow-2xl shadow-lime-500">
                 <img src="https://images.unsplash.com/photo-1715719967078-2d7ddc21507a?"
-                    class="inline hover:shadow-xl transform hover:-translate-y-2" alt="">
+                    class="inline hover:shadow-xl transform hover:-translate-y-2 rounded-lg" alt="">
                 <h1> Lavender Plant</h1>
                 <p>$20</p>
             </div>
 
-            <div>
+            <div class="rounded-lg border border-black p-2 hover:shadow-2xl shadow-lime-500">
                 <img src="https://images.unsplash.com/photo-1685719874896-d698a2d37763?"
-                    class="inline hover:shadow-xl transform hover:-translate-y-2" alt="">
+                    class="inline hover:shadow-xl transform hover:-translate-y-2 rounded-lg" alt="">
                 <h1> Daffodil Plant</h1>
                 <p>$20</p>
             </div>
 
 
-            <div>
+            <div   class="rounded-lg border border-black p-2 hover:shadow-2xl shadow-lime-500">
                 <img src="https://images.unsplash.com/photo-1621815042878-5c1c3cdd1de0?"
-                    class="inline hover:shadow-xl transform hover:-translate-y-2" alt="">
+                    class="inline hover:shadow-xl transform hover:-translate-y-2 rounded-lg" alt="">
                 <h1>Hybiscus Plant</h1>
                 <p>$20</p>
             </div>
 
-            <div>
+            <div class="rounded-lg border border-black p-2 hover:shadow-2xl shadow-lime-500">
                 <img src="https://images.unsplash.com/photo-1499411523231-ff35a8dd373c?"
-                    class="inline hover:shadow-xl transform hover:-translate-y-2" alt="">
+                    class="inline hover:shadow-xl transform hover:-translate-y-2 rounded-lg" alt="">
                 <h1>Jasmine Plant</h1>
                 <p>$20</p>
             </div>
 
-            <div>
+            <div class="rounded-lg border border-black p-2 hover:shadow-2xl shadow-lime-500">
                 <img src="https://images.unsplash.com/photo-1689718581603-6c32f41523f6?"
-                    class="inline hover:shadow-xl transform hover:-translate-y-2" alt="">
+                    class="inline hover:shadow-xl transform hover:-translate-y-2 rounded-lg" alt="">
                 <h1> Iris Plant</h1>
                 <p>$20</p>
             </div>
 
-            <div>
+            <div class="rounded-lg border border-black p-2 hover:shadow-2xl shadow-lime-500">
                 <img src="https://plus.unsplash.com/premium_photo-1674849655000-1a91170b641a?"
-                    class="inline hover:shadow-xl transform hover:-translate-y-2" alt="">
+                    class="inline hover:shadow-xl transform hover:-translate-y-2 rounded-lg" alt="">
                 <h1>Rose Plant</h1>
                 <p>$20</p>
             </div>
@@ -208,13 +241,25 @@
     <section class="bg-green-100 p-10 flex flex-col gap-5 ">
         <h1 class="text-4xl font-bold">Greenden</h1>
         <p>The Standard chunk of Lorem ipsum used since the 1500s is reprodused below for those interest</p>
-        <p>@ 2021 Greenday.com</p>
+        <p>@ 2026 Greendan.com</p>
 
     </section>
 
 
 
+<script>
+    const menuicon = document.getElementById('menuicon');
+    const sidenav = document.getElementById('sidenav');
+    const closenav = document.getElementById('closenav');
 
+    menuicon.addEventListener('click', () => {
+        sidenav.style.right = '0';
+    });
+
+    closenav.addEventListener('click', () => {
+        sidenav.style.right = '-50%';
+    });
+</script>
 
 </body>
 
