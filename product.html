@@ -116,6 +116,18 @@
         <p>@ 2021 Greenday.com</p>
     </section>
     
-    <script src="product.js"></script>
+    <script>
+    const menuicon = document.getElementById('menuicon');
+    const sidenav = document.getElementById('sidenav');
+    const closenav = document.getElementById('closenav');
+
+    menuicon.addEventListener('click', () => {
+        sidenav.style.right = '0';
+    });
+
+    closenav.addEventListener('click', () => {
+        sidenav.style.right = '-50%';
+    });
+</script>
 </body>
 </html>
